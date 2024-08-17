@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -19,7 +21,7 @@ public class Main {
         System.out.println("Task 2");
 
         int min = salaries[0];
-        int max = salaries[1];
+        int max = salaries[0];
 
         for (int i = 0; i < salaries.length; i++) {
             if (salaries[i] < min){
@@ -42,19 +44,14 @@ public class Main {
         System.out.println("Task 4");
 
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = 0; i < reverseFullName.length / 2 ; i++) {
-
-            int leftIndex = i;
-            int rightIndex = reverseFullName.length - i - 1;
-
-            char temp = reverseFullName[leftIndex];
-            reverseFullName[leftIndex] = reverseFullName[rightIndex];
-            reverseFullName[rightIndex] = temp;
-        }
-        for (int i = 0; i < reverseFullName.length ; i++) {
-            System.out.print(reverseFullName[i]);
+        for (int i = reverseFullName.length - 1 ; i >= 0 ; i--) {
+            System.out.print(reverseFullName[i] + " ");
 
         }
+        System.out.println(Arrays.toString(reverseFullName));
+
+
+
 
     }
 }
